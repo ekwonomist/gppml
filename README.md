@@ -36,27 +36,35 @@ The core estimation command, which performs PPML regression with HDFE, utilizing
 | **Dependencies** | Requires `ftools` (min. v2.45.0) and `reghdfe` (min. v6.0.2). |
 
 ---
-
 ## 🚀 Two-Step GPPML Estimation
 
-The recommended approach involves two steps: first, run the standard PPML and use `cvmrtest` to estimate $\lambda$; second, re-run the regression using the estimated $\lambda$ in `gppmlhdfe`'s `lambda()` option.
+The **Generalized Poisson Pseudo-Maximum Likelihood (GPPML)** estimation is implemented using a two-step procedure:
 
-### Step 1: Run Standard PPML and Estimate $\lambda$
+1.  **Diagnosis:** Run the standard PPML estimation (where $\lambda=1$) and use the resulting residuals and fitted values to estimate the optimal $\lambda$ parameter via **Iterated Generalized Method of Moments (GMM)** using `cvmrtest`.
+2.  **Estimation:** Re-run the model using the `gppmlhdfe` command, inputting the estimated $\lambda$ value via the `lambda()` option to implement the GPPML weighting scheme.
+
+### Implementation
+
+The full GPPML procedure is executed as follows:
 
 ```stata
 * Load example data
 use gppmlhdfe_example.dta, clear
 
-* Step 1: Run standard PPML (Lambda = 1 implicitly) and estimate Lambda.
-* The 'd' option saves the sum of FEs, and 'vce(cluster ...)' ensures clustered SEs.
+* Phase 1: PPML Estimation and Lambda Diagnosis ------------------------------
+
+* Run standard PPML (Lambda = 1 implicitly). 
+* 'd' saves the sum of FEs, and 'vce(cluster ...)' ensures clustered SEs.
 ppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, absorb(exp#year imp#year) d vce(cluster pair_id)
 
 * Estimate Lambda using Iterated GMM (default) based on the PPML residuals.
 cvmrtest, gmmtype(iterated) h0(1) lambda0(1)
 
-* Store the estimated Lambda value, e(lambda_ppml).
+* Store the estimated Lambda value, e(lambda_ppml), for use in the next step.
 local lambda_ppml = e(lambda_ppml)
 
-* Step 2: Run the GPPML estimator using the estimated Lambda.
+* Phase 2: GPPML Estimation --------------------------------------------------
+
+* Run the GPPML estimator using the estimated Lambda.
 gppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, lambda(`lambda_ppml') absorb(exp#year imp#year) d vce(cluster pair_id)
 
