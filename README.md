@@ -47,13 +47,16 @@ The recommended approach involves two steps: first, run the standard PPML and us
 * Load example data
 use gppmlhdfe_example.dta, clear
 
-* Run standard PPML (Lambda = 1 implicitly). 
+* Step 1: Run standard PPML (Lambda = 1 implicitly) and estimate Lambda.
 * The 'd' option saves the sum of FEs, and 'vce(cluster ...)' ensures clustered SEs.
 ppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, absorb(exp#year imp#year) d vce(cluster pair_id)
 
-* Estimate Lambda using Iterated GMM (default)
+* Estimate Lambda using Iterated GMM (default) based on the PPML residuals.
 cvmrtest, gmmtype(iterated) h0(1) lambda0(1)
 
-* Store the estimated Lambda value for use in the next step
+* Store the estimated Lambda value, e(lambda_ppml).
 local lambda_ppml = e(lambda_ppml)
+
+* Step 2: Run the GPPML estimator using the estimated Lambda.
+gppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, lambda(`lambda_ppml') absorb(exp#year imp#year) d vce(cluster pair_id)
 
