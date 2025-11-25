@@ -99,7 +99,7 @@ gppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, lambda(`lambda') ab
 
 ```bibtex
 @article{kwon2025GeneralizedPoissonPseudo,
-  title = {A {{Generalized Poisson-Pseudo Maximum Likelihood Estimator}}},
+  title = {A Generalized Poisson-Pseudo Maximum Likelihood Estimator},
   author = {Kwon, Ohyun and Yoon, Jangsu and Yotov, Yoto V.},
   year = 2025,
   journal = {Journal of Business \& Economic Statistics},
