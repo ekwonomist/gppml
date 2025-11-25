@@ -21,7 +21,6 @@ A post-estimation command used to estimate the optimal $\lambda$ parameter neces
 | **GMM Types** | Supports `onestep`, `twostep`, or `iterated` GMM estimation. |
 | **Output** | Stores the estimated lambda value in the scalar `e(lambda)`. |
 | Option | Description |
-| :--- | :--- |
 | `gmmtype(string)` | Specifies the GMM estimation method. Options are `onestep`, `twostep`, or `iterated` (default). |
 | `h0(real)` | Sets the initial value for the parameter `h` in the GMM estimation. Default is `1`. |
 | `lambda0(real)` | Sets the initial value for the parameter `lambda` in the GMM estimation. Default is `1`. |
