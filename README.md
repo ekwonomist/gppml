@@ -84,7 +84,7 @@ The full GPPML procedure is executed as follows:
 
 ```stata
 * Load example data
-use gppmlhdfe_example.dta, clear
+use "https://raw.githubusercontent.com/ekwonomist/gppml/main/example/gppmlhdfe_example.dta", clear
 
 * Phase 1: PPML Estimation and Lambda Diagnosis ------------------------------
 
