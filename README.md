@@ -73,8 +73,8 @@ ftools, compile
 reghdfe, compile
 
 * Install gppmlhdfe
-cap ado unintall gppmlhdfe
-net install gppmlhdfe, from("https://raw.githubusercontent.com/ekwonomist/gppml/gppml/")
+cap ado uninstall gppmlhdfe
+net install gppmlhdfe, from("https://raw.githubusercontent.com/ekwonomist/gppml/main/gppml/")
 ```
 
 
