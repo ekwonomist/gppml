@@ -110,7 +110,9 @@ The companion command, {cmd:cvmrtest}, is a post-estimation tool that estimates 
 {title:Citation}
 
 {pstd}
-{p 4 8 2}Kwon, Ohyun, Jangsu Yoon, and Yoto V. Yotov. 2025. “A Generalized Poisson-Pseudo Maximum Likelihood Estimator.” {it:Journal of Business & Economic Statistics} 0 (ja): 1–27. {browse "https://doi.org/10.1080/07350015.2025.2544190":https://doi.org/10.1080/07350015.2025.2544190}.{p_end}
+{p 4 8 2}Kwon, Ohyun, Jangsu Yoon, & Yoto V. Yotov. 2025. "A Generalized Poisson-Pseudo Maximum Likelihood Estimator." {it:Journal of Business & Economic Statistics}, 1-14. {browse "https://doi.org/10.1080/07350015.2025.2544190":https://doi.org/10.1080/07350015.2025.2544190}.{p_end}
+
+
 
 {pstd}
 For the base {cmd:ppmlhdfe} methodology:{p_end}

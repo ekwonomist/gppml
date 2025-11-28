@@ -112,7 +112,7 @@ gppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, lambda(`lambda') ab
 
 #### As text
 
-- Kwon, Ohyun, Jangsu Yoon, and Yoto V. Yotov. 2025. “A Generalized Poisson-Pseudo Maximum Likelihood Estimator.” *Journal of Business & Economic Statistics* 0 (ja): 1–27. https://doi.org/10.1080/07350015.2025.2544190.
+- Kwon, Ohyun, Jangsu Yoon, & Yoto V. Yotov. 2025. "A Generalized Poisson-Pseudo Maximum Likelihood Estimator." *Journal of Business & Economic Statistics*, 1-14. https://doi.org/10.1080/07350015.2025.2544190.
 
 #### As BibTex
 
@@ -123,8 +123,7 @@ gppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, lambda(`lambda') ab
   year = 2025,
   journal = {Journal of Business \& Economic Statistics},
   volume = {0},
-  number = {ja},
-  pages = {1--27},
+  pages = {1--14},
   publisher = {ASA Website},
   issn = {0735-0015},
   doi = {10.1080/07350015.2025.2544190}
