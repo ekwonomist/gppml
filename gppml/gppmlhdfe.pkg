@@ -1,9 +1,10 @@
 v 3
-d PPML with High Dimensional Fixed Effects (authors: Sergio Correia, Paulo Guimarães, Thomas Zylkin)
+d Generalized-PPML with High Dimensional Fixed Effects (authors: Ohyun Kwon, Jangsu Yoon, Yoto V. Yotov)
 d
-d This package implements Poisson Pseudo-Maximum Likelihood (PPML) estimation with
+d This package implements the test of Constant Variance-to-Mean Ratio (cvmrtest) and 
+d Generalized-Poisson Pseudo-Maximum Likelihood (GPPML) estimation with
 d high-dimensional fixed effects (HDFE) using the Iteratively Re-weighted Least Squares (IRLS)
-d algorithm. It is heavily reliant on the reghdfe and ftools packages.
+d algorithm. It is heavily reliant on the hdfe packages.
 d
 f gppmlhdfe.ado
 f gppmlhdfe.mata
