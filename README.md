@@ -56,8 +56,9 @@ The **Generalized Poisson Pseudo-Maximum Likelihood (GPPML)** estimation is impl
 ### 📥 Installation
 
 ```stata
-net install gppmlhdfe, from("https://raw.github.com/gppml/gppmlhdfe/main/") replace
+net install gppmlhdfe, from("https://raw.githubusercontent.com/ekwonomist/gppml/gppml/")
 ```
+
 
 ### ▶️ Implementation
 
