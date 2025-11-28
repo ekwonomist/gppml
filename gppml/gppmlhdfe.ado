@@ -1,6 +1,9 @@
-*! version 2.3.0 25feb2021
-*! Authors: Sergio Correia, Paulo Guimarães, Thomas Zylkin
-*! URL: https://github.com/sergiocorreia/ppmlhdfe
+*! version 0.1.1 25nov2025
+*! Authors: Ohyun Kwon, Jangsu Yoon, Yoto V. Yotov
+*! URL: https://github.com/ekwonomist/gppml/tree/main
+*! This code borrows heavily from ppmlhdfe by Sergio Correia, Paulo Guimarães, and Thomas Zylkin
+*! The key difference is that it introduces the overdispersion parameter lambda for GPPML estimation
+
 
 program gppmlhdfe, eclass
 	if replay() {
@@ -119,7 +122,7 @@ program Estimate, eclass
 			/// -----------------
 		GUESS(string) 						/// How to define initial conditions (default, ols, etc.)
 		TOLerance(real 1e-8) 				/// IRLS Tolerance
-		Lambda(real 1) 				    /// JOY'S LAMBDA INPUT
+		Lambda(real 1) 				    /// GPPML'S LAMBDA INPUT
 		MAXITerations(integer 10000) 		/// Maximum number of iterations
 		SEParation(string) 					/// Techniques used to check for complete separation
 		D(name) D2							/// Save residuals (default name is: _reghdfe_resid)

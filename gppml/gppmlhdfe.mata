@@ -7,11 +7,10 @@
 	if (_rc) {
 	    di as error "ppmlhdfe requires the {bf:reghdfe} package (version 6 or newer), which is not installed"
 	    di as error `"    - install from {stata ssc install reghdfe:SSC}"'
-	    di as error `"    - install from {stata `"net install reghdfe, from("https://github.com/sergiocorreia/reghdfe/raw/master/src/")"':Github}"'
+	    di as error `"    - install from {stata `"net install gppmlhdfe, from("https://raw.githubusercontent.com/ekwonomist/gppml/main/gppml/")"':Github}"'
 	    exit 9
 	}
 	include "`r(fn)'"
-
 
 // Include .mata files  -----------------------------------------------------
 	local GLM "class GLM scalar"
