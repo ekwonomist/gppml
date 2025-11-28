@@ -56,6 +56,24 @@ The **Generalized Poisson Pseudo-Maximum Likelihood (GPPML)** estimation is impl
 ### 📥 Installation
 
 ```stata
+* Install ftools
+cap ado uninstall ftools
+net install ftools, from("https://raw.githubusercontent.com/sergiocorreia/ftools/master/src/")
+
+* Install reghdfe
+cap ado uninstall reghdfe
+net install reghdfe, from("https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src/")
+
+* Install ppmlhdfe
+cap ado uninstall ppmlhdfe
+net install ppmlhdfe, from("https://raw.githubusercontent.com/sergiocorreia/ppmlhdfe/master/src/")
+
+* Create compiled files
+ftools, compile
+reghdfe, compile
+
+* Install gppmlhdfe
+cap ado unintall gppmlhdfe
 net install gppmlhdfe, from("https://raw.githubusercontent.com/ekwonomist/gppml/gppml/")
 ```
 
