@@ -93,7 +93,7 @@ use "https://raw.githubusercontent.com/ekwonomist/gppml/main/example/gppmlhdfe_e
 ppmlhdfe trade BRDR CLNY CNTG DIST DIST_IN EU LANG RTA WTO, absorb(exp#year imp#year) d vce(cluster pair_id)
 
 * Estimate Lambda using Iterated GMM (default) based on the PPML residuals.
-cvmrtest, gmmtype(iterated) h0(1) lambda0(1)
+cvmrtest
 
 * Store the estimated Lambda value, e(lambda), for use in the next step.
 local lambda = e(lambda)
