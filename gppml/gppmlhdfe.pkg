@@ -4,7 +4,7 @@ d
 d This package implements the test of Constant Variance-to-Mean Ratio (cvmrtest) and 
 d Generalized-Poisson Pseudo-Maximum Likelihood (GPPML) estimation with
 d high-dimensional fixed effects (HDFE) using the Iteratively Re-weighted Least Squares (IRLS)
-d algorithm. It is heavily reliant on the hdfe packages.
+d algorithm. It is heavily reliant on the hdfe packages. 
 d
 f gppmlhdfe.ado
 f gppmlhdfe.mata
